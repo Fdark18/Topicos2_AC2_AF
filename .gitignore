@@ -3,3 +3,39 @@ partes
 trabalho_academico.tex
 references.bib
 .claude
+
+# STM32CubeIDE
+.metadata/
+.settings/
+Debug/
+Release/
+*.launch
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+
+# Build files
+build/
+*.o
+*.d
+*.su
+
+# Generated files
+Drivers/CMSIS/
+Drivers/STM32L0xx_HAL_Driver/
+Middlewares/Third_Party/FreeRTOS/
+
+# Project files (keep .project and .cproject)
+# .project
+# .cproject
+
+# Documentation artifacts
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
