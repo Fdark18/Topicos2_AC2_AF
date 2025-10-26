@@ -1,14 +1,14 @@
-# 🚀 Quick Start - STM32L053R8 Nucleo
+#  Quick Start - STM32L053R8 Nucleo
 
 ## Guia Rápido de 5 Minutos
 
-### ✅ Pré-requisitos
+###  Pré-requisitos
 
 - [ ] **STM32CubeIDE** instalado ([Download aqui](https://www.st.com/en/development-tools/stm32cubeide.html))
 - [ ] **STM32 Nucleo-L053R8** board
 - [ ] Cabo USB tipo Mini-B
 
-### 📦 Passo 1: Criar Projeto Novo
+###  Passo 1: Criar Projeto Novo
 
 1. Abra **STM32CubeIDE**
 2. **File > New > STM32 Project**
@@ -18,7 +18,7 @@
 6. Nome: `mvp_freertos`
 7. **Finish**
 
-### ⚙️ Passo 2: Configurar no STM32CubeMX
+###  Passo 2: Configurar no STM32CubeMX
 
 A janela do CubeMX abrirá automaticamente.
 
@@ -63,13 +63,13 @@ A janela do CubeMX abrirá automaticamente.
    - `TOTAL_HEAP_SIZE`: **4096**
    - `MAX_PRIORITIES`: **6**
 
-### 💾 Passo 3: Gerar Código
+###  Passo 3: Gerar Código
 
 1. **Project > Generate Code**
 2. Se perguntar sobre perspectiva, clique **Yes**
 3. Aguarde a geração
 
-### 📁 Passo 4: Copiar Arquivos do Projeto
+###  Passo 4: Copiar Arquivos do Projeto
 
 #### Navegue até a pasta do projeto gerado:
 ```
@@ -105,13 +105,13 @@ usart.c
 gpio.c
 ```
 
-### 🔨 Passo 5: Compilar
+###  Passo 5: Compilar
 
 1. No STM32CubeIDE: **Project > Build Project** (ou Ctrl+B)
 2. Aguarde a compilação
 3. Deve aparecer: **Build Finished. 0 errors, X warnings**
 
-### 📥 Passo 6: Descarregar no STM32
+###  Passo 6: Descarregar no STM32
 
 1. Conecte o **Nucleo board** via USB
 2. **Run > Debug** (ou F11)
@@ -119,7 +119,7 @@ gpio.c
 4. Aguarde o flash
 5. Clique em **Resume** (F8) para executar
 
-### 📊 Passo 7: Monitorar UART
+###  Passo 7: Monitorar UART
 
 #### Windows:
 1. Abra **PuTTY** ou **TeraTerm**
@@ -141,7 +141,7 @@ screen /dev/ttyACM0 115200
 minicom -D /dev/ttyACM0 -b 115200
 ```
 
-### ✅ Saída Esperada
+###  Saída Esperada
 
 ```
 ╔════════════════════════════════════════════════════════════╗
@@ -155,7 +155,7 @@ minicom -D /dev/ttyACM0 -b 115200
 [SIMULACAO] ===== Simulando detecção de VERDE =====
 ```
 
-### 🎯 Teste de Funcionamento
+###  Teste de Funcionamento
 
 1. **LED LD2 (PA5)** deve piscar a cada 500ms ✓
 2. **UART** deve mostrar mensagens ✓
@@ -163,9 +163,9 @@ minicom -D /dev/ttyACM0 -b 115200
 
 ---
 
-## 🐛 Problemas Comuns
+##  Problemas Comuns
 
-### ❌ Erro: "region RAM overflowed"
+###  Erro: "region RAM overflowed"
 
 **Causa**: Memória RAM insuficiente (STM32L053R8 tem apenas 8KB)
 
@@ -176,7 +176,7 @@ minicom -D /dev/ttyACM0 -b 115200
 
 ---
 
-### ❌ Printf não aparece no terminal
+###  Printf não aparece no terminal
 
 **Verificações**:
 1. ✓ USART2 configurado em 115200 baud?
@@ -192,7 +192,7 @@ HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
 
 ---
 
-### ❌ Sistema trava ou reseta
+###  Sistema trava ou reseta
 
 **Causa**: Stack overflow
 
@@ -204,7 +204,7 @@ HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
 
 ---
 
-### ❌ FreeRTOS não compila
+###  FreeRTOS não compila
 
 **Verificação**:
 1. FreeRTOS foi habilitado no CubeMX?
@@ -215,18 +215,18 @@ HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
 
 ---
 
-## 📚 Próximos Passos
+##  Próximos Passos
 
 Depois que estiver funcionando:
 
-1. 📖 Leia o [README_STM32.md](README_STM32.md) completo
-2. 🎨 Veja os [DIAGRAMAS.md](DIAGRAMAS.md)
-3. ⏱️ Entenda os [CALCULO_TEMPO.md](CALCULO_TEMPO.md)
-4. 🔧 Customize o hardware conforme sua aplicação
+1.  Leia o [README_STM32.md](README_STM32.md) completo
+2.  Veja os [DIAGRAMAS.md](DIAGRAMAS.md)
+3.  Entenda os [CALCULO_TEMPO.md](CALCULO_TEMPO.md)
+4.  Customize o hardware conforme sua aplicação
 
 ---
 
-## 📞 Precisa de Ajuda?
+##  Precisa de Ajuda?
 
 - **Documentação**: [README_STM32.md](README_STM32.md)
 - **Setup Detalhado**: [STM32_SETUP_GUIDE.md](STM32_SETUP_GUIDE.md)
@@ -236,5 +236,3 @@ Depois que estiver funcionando:
 ---
 
 **Tempo estimado**: 15-20 minutos (primeira vez)
-
-**Boa sorte! 🚀**
