@@ -169,7 +169,7 @@ void CameraNode_SimulateDetection(CameraNode_t *camera, Color_t color,
             "PISTAO A (VERDE -> DIREITA)" : "PISTAO B (AZUL -> ESQUERDA)";
 
         printf("\n[%s] ========================================\n", camera->base.node_id);
-        printf("[%s] ✓ OBJETO #%u DETECTADO: Cor %s ENTROU no campo\n",
+        printf("[%s] OBJETO #%u DETECTADO: Cor %s ENTROU no campo\n",
                camera->base.node_id, camera->object_counter,
                BaseNode_ColorToString(color));
         printf("[%s]   Pixels: %u | Qualidade: %.1f%%\n",

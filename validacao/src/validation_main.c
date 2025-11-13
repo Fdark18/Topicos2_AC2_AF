@@ -7,6 +7,16 @@
 
 #include <stdio.h>
 
+#ifdef _WIN32
+#include <windows.h>
+static void SetupConsoleUtf8(void) {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+}
+#else
+static void SetupConsoleUtf8(void) {}
+#endif
+
 extern bool SafetyNode_GlobalEmergencyCheck(void);
 
 static SafetyNode_t safety;
@@ -73,6 +83,7 @@ static void StatsTask(void *pvParameters) {
 }
 
 int main(void) {
+    SetupConsoleUtf8();
     freertos_sim_init();
 
     printf("\n");

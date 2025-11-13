@@ -19,7 +19,7 @@ static void ConveyorNode_ControlTask(void *pvParameters) {
     while (conveyor->base.running) {
         // Verifica se há parada de emergência
         if (SafetyNode_GlobalEmergencyCheck() && conveyor->state != CONVEYOR_EMERGENCY_STOP) {
-            printf("[%s] ⚠️  EMERGÊNCIA DETECTADA - PARANDO ESTEIRA IMEDIATAMENTE ⚠️\n",
+            printf("[%s] [ALERTA] EMERGÊNCIA DETECTADA - PARANDO ESTEIRA IMEDIATAMENTE\n",
                    conveyor->base.node_id);
             ConveyorNode_Halt(conveyor, true);
         }
@@ -186,7 +186,7 @@ bool ConveyorNode_Halt(ConveyorNode_t *conveyor, bool emergency) {
     conveyor->total_stops++;
     if (emergency) {
         conveyor->emergency_stops++;
-        printf("[%s] ⚠️⚠️⚠️  ESTEIRA PARADA POR EMERGÊNCIA  ⚠️⚠️⚠️\n",
+        printf("[%s] [ALERTA] ESTEIRA PARADA POR EMERGÊNCIA\n",
                conveyor->base.node_id);
     } else {
         printf("[%s] Esteira parada\n", conveyor->base.node_id);
@@ -256,7 +256,7 @@ void ConveyorNode_PrintStats(ConveyorNode_t *conveyor) {
             state_str = "Em movimento";
             break;
         case CONVEYOR_EMERGENCY_STOP:
-            state_str = "⚠️  PARADA DE EMERGÊNCIA";
+            state_str = "PARADA DE EMERGÊNCIA";
             break;
         case CONVEYOR_STOPPED:
         default:

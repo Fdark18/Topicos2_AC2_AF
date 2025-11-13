@@ -55,7 +55,7 @@ bool SafetyNode_Init(SafetyNode_t *safety, const char *node_id, uint8_t emergenc
 
     printf("[%s] Nó de segurança inicializado (GPIO: %u)\n",
            safety->base.node_id, emergency_gpio);
-    printf("[%s] ⚠️  SISTEMA DE PARADA DE EMERGÊNCIA ATIVO ⚠️\n",
+    printf("[%s] [ALERTA] SISTEMA DE PARADA DE EMERGÊNCIA ATIVO\n",
            safety->base.node_id);
 
     return true;
@@ -110,7 +110,7 @@ void SafetyNode_TriggerEmergency(SafetyNode_t *safety) {
 
     printf("\n");
     printf("╔════════════════════════════════════════════════════════════╗\n");
-    printf("║                   ⚠️  EMERGÊNCIA ACIONADA ⚠️               ║\n");
+    printf("║                   ALERTA: EMERGÊNCIA ACIONADA              ║\n");
     printf("╠════════════════════════════════════════════════════════════╣\n");
     printf("║  [%s] BOTÃO VERMELHO DE SEGURANÇA PRESSIONADO          ║\n", safety->base.node_id);
     printf("║  TODOS OS SISTEMAS SERÃO PARADOS IMEDIATAMENTE            ║\n");
@@ -148,7 +148,7 @@ bool SafetyNode_ResetEmergency(SafetyNode_t *safety) {
         safety->button_pressed = false;
         g_emergency_stop = false;
 
-        printf("[%s] ✓ Sistema liberado para operação\n\n", safety->base.node_id);
+        printf("[%s] [OK] Sistema liberado para operação\n\n", safety->base.node_id);
         return true;
     }
 
@@ -177,7 +177,7 @@ void SafetyNode_PrintStats(SafetyNode_t *safety) {
            safety->base.node_id);
     printf("[%s] Estado: %s\n",
            safety->base.node_id,
-           safety->emergency_stop_active ? "⚠️  EMERGÊNCIA ATIVA" : "✓ Operacional");
+           safety->emergency_stop_active ? "EMERGÊNCIA ATIVA" : "Operacional");
     printf("[%s] Total de acionamentos: %u\n",
            safety->base.node_id, safety->emergency_activations);
     printf("[%s] Comandos de parada emitidos: %u\n",

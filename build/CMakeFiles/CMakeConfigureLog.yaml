@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 13/11/2025 10:34:54.
+      Build started 13/11/2025 11:07:04.
       
       Project "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.53
+      Time Elapsed 00:00:00.97
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-pc5yni"
-      binary: "C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-pc5yni"
+      source: "C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-ikd5m6"
+      binary: "C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-ikd5m6"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -82,40 +82,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-pc5yni'
+        Change Dir: 'C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-ikd5m6'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ce1cc.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f607a.vcxproj /p:Configuration=Debug /p:Platform=win32 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 13/11/2025 10:34:55.
+        Build started 13/11/2025 11:07:06.
         
-        Project "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pc5yni\\cmTC_ce1cc.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ikd5m6\\cmTC_f607a.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_ce1cc.dir\\Debug\\".
+          Creating directory "cmTC_f607a.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pc5yni\\Debug\\".
-          Creating directory "cmTC_ce1cc.dir\\Debug\\cmTC_ce1cc.tlog\\".
+          Creating directory "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ikd5m6\\Debug\\".
+          Creating directory "cmTC_f607a.dir\\Debug\\cmTC_f607a.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_ce1cc.dir\\Debug\\cmTC_ce1cc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_ce1cc.dir\\Debug\\cmTC_ce1cc.tlog\\unsuccessfulbuild".
+          Creating "cmTC_f607a.dir\\Debug\\cmTC_f607a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_f607a.dir\\Debug\\cmTC_f607a.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce1cc.dir\\Debug\\\\" /Fd"cmTC_ce1cc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f607a.dir\\Debug\\\\" /Fd"cmTC_f607a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Versao 19.44.35219 para x86
           Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce1cc.dir\\Debug\\\\" /Fd"cmTC_ce1cc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f607a.dir\\Debug\\\\" /Fd"cmTC_f607a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pc5yni\\Debug\\cmTC_ce1cc.exe" /INCREMENTAL /ILK:"cmTC_ce1cc.dir\\Debug\\cmTC_ce1cc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-pc5yni/Debug/cmTC_ce1cc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-pc5yni/Debug/cmTC_ce1cc.lib" /MACHINE:X86  /machine:X86 cmTC_ce1cc.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_ce1cc.vcxproj -> C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pc5yni\\Debug\\cmTC_ce1cc.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ikd5m6\\Debug\\cmTC_f607a.exe" /INCREMENTAL /ILK:"cmTC_f607a.dir\\Debug\\cmTC_f607a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-ikd5m6/Debug/cmTC_f607a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/CMakeScratch/TryCompile-ikd5m6/Debug/cmTC_f607a.lib" /MACHINE:X86  /machine:X86 cmTC_f607a.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_f607a.vcxproj -> C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ikd5m6\\Debug\\cmTC_f607a.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_ce1cc.dir\\Debug\\cmTC_ce1cc.tlog\\unsuccessfulbuild".
-          Touching "cmTC_ce1cc.dir\\Debug\\cmTC_ce1cc.tlog\\cmTC_ce1cc.lastbuildstate".
-        Done Building Project "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pc5yni\\cmTC_ce1cc.vcxproj" (default targets).
+          Deleting file "cmTC_f607a.dir\\Debug\\cmTC_f607a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f607a.dir\\Debug\\cmTC_f607a.tlog\\cmTC_f607a.lastbuildstate".
+        Done Building Project "C:\\Users\\jhony\\segundo_semestre2025\\topicos_especiais\\ac2_af\\tpicos_freertos\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ikd5m6\\cmTC_f607a.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.48
+        Time Elapsed 00:00:00.75
         
       exitCode: 0
   -
