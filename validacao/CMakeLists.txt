@@ -22,8 +22,6 @@ target_include_directories(esteira_sim PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/../Core/Inc
 )
 
-if(UNIX AND NOT APPLE)
+if(UNIX)
     target_link_libraries(esteira_sim PRIVATE pthread m)
-elseif(WIN32)
-    target_link_libraries(esteira_sim PRIVATE pthreadVC2)
 endif()

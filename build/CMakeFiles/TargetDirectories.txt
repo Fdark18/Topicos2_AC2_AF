@@ -1,0 +1,3 @@
+C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/esteira_sim.dir
+C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,10 @@
+^C:\USERS\JHONY\SEGUNDO_SEMESTRE2025\TOPICOS_ESPECIAIS\AC2_AF\TPICOS_FREERTOS\BUILD\CMAKEFILES\283C9BF8B2C37EE09AA67E500A90960A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/validacao -BC:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jhony/segundo_semestre2025/topicos_especiais/ac2_af/tpicos_freertos/build/esteira_validacao.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

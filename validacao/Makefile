@@ -1,6 +1,12 @@
 CC ?= gcc
-CFLAGS ?= -std=c11 -Wall -Wextra -Wno-unused-parameter -Iinclude -I../Core/Inc -pthread
-LDFLAGS ?= -pthread -lm
+CFLAGS += -std=c11 -Wall -Wextra -Wno-unused-parameter -Iinclude -I../Core/Inc
+
+ifeq ($(OS),Windows_NT)
+LDFLAGS +=
+else
+CFLAGS += -pthread
+LDFLAGS += -pthread -lm
+endif
 
 CORE_SRCS = \
 	../Core/Src/base_node.c \
