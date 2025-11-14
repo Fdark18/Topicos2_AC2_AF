@@ -1,4 +1,5 @@
 #include "piston_node.h"
+#include "timing_config.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -143,6 +144,12 @@ bool PistonNode_Init(PistonNode_t *piston, const char *node_id,
     if (!BaseNode_Init(&piston->base, node_id, node_type)) {
         return false;
     }
+
+    // Ajusta parâmetros de timing com base na configuração física
+    piston->base.belt_speed_mm_s = BELT_SPEED_MM_S;
+    piston->base.camera_to_piston_distance_mm = CAMERA_TO_PISTON_DISTANCE_MM;
+    uint32_t travel_time_us = BaseNode_CalculateBeltDelay(&piston->base);
+    piston->base.deadline_us = travel_time_us + SAFETY_MARGIN_US + PISTON_ACTIVATION_TIME_US;
 
     // Configurações específicas
     piston->target_color = target_color;

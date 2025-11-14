@@ -6,6 +6,7 @@
 #include "queue.h"
 #include "semphr.h"
 #include "timers.h"
+#include "timing_config.h"
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -16,7 +17,7 @@
 #define MAX_NODE_ID_LEN 32
 #define MAX_MESSAGE_SIZE 512
 #define QUEUE_SIZE 10
-#define DEADLINE_US 50000  // 50ms deadline padrão
+#define DEADLINE_US END_TO_END_DEADLINE_US
 
 // Tipos de nós no sistema distribuído
 typedef enum {

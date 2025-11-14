@@ -1,4 +1,5 @@
 #include "base_node.h"
+#include "timing_config.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -52,9 +53,9 @@ bool BaseNode_Init(BaseNode_t *node, const char *node_id, NodeType_t node_type) 
     node->last_heartbeat = 0;
 
     // Configurações padrão de timing
-    node->deadline_us = DEADLINE_US;
-    node->belt_speed_mm_s = 100;
-    node->camera_to_piston_distance_mm = 200;
+    node->deadline_us = END_TO_END_DEADLINE_US;
+    node->belt_speed_mm_s = BELT_SPEED_MM_S;
+    node->camera_to_piston_distance_mm = CAMERA_TO_PISTON_DISTANCE_MM;
 
     // Inicializa métricas
     node->metrics_count = 0;
@@ -201,9 +202,16 @@ RealTimeMetrics_t BaseNode_CalculateMetrics(BaseNode_t *node,
     }
 
     // Calcula QoS score
+    if (metrics.deadline_us == 0) {
+        metrics.deadline_us = 1;
+    }
+
     float latency_ratio = (float)metrics.detection_to_activation_latency_us /
                          (float)metrics.deadline_us;
-    metrics.qos_score = (latency_ratio <= 1.0f) ? (1.0f - latency_ratio) : 0.0f;
+    metrics.qos_score = 1.0f - latency_ratio;
+    if (metrics.qos_score < 0.0f) {
+        metrics.qos_score = 0.0f;
+    }
 
     if (!metrics.deadline_met) {
         metrics.qos_score *= 0.5f; // Penaliza se deadline não foi cumprido

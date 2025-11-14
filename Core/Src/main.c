@@ -38,7 +38,11 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+typedef struct {
+  BaseNode_t *source;
+  BaseNode_t *targets[4];
+  size_t target_count;
+} RouterContext_t;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -63,6 +67,7 @@ static ConveyorNode_t conveyor;
 static CameraNode_t camera;
 static PistonNode_t piston_a;
 static PistonNode_t piston_b;
+static RouterContext_t camera_router_ctx;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -77,6 +82,7 @@ void Error_Handler(void);
 static void SimulationTask(void *pvParameters);
 static void StatsTask(void *pvParameters);
 static void BlinkTask(void *pvParameters);
+static void CameraRouterTask(void *pvParameters);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -188,6 +194,13 @@ int main(void)
     printf("[ERROR] Falha ao iniciar Camera Node\r\n");
     Error_Handler();
   }
+
+  /* Configure routing from camera to pistons */
+  camera_router_ctx.source = &camera.base;
+  camera_router_ctx.targets[0] = &piston_a.base;
+  camera_router_ctx.targets[1] = &piston_b.base;
+  camera_router_ctx.target_count = 2;
+  xTaskCreate(CameraRouterTask, "CamRouter", 256, &camera_router_ctx, 3, NULL);
 
   /* Start conveyor belt */
   ConveyorNode_Run(&conveyor);
@@ -481,6 +494,37 @@ static void StatsTask(void *pvParameters)
     PistonNode_PrintStats(&piston_b);
 
     vTaskDelay(xFrequency);
+  }
+}
+
+/**
+ * @brief  Camera routing task - forwards camera TX messages to piston RX queues
+ */
+static void CameraRouterTask(void *pvParameters)
+{
+  RouterContext_t *ctx = (RouterContext_t *)pvParameters;
+  Message_t message;
+
+  if (ctx == NULL || ctx->source == NULL) {
+    vTaskDelete(NULL);
+  }
+
+  printf("[ROUTER] Tarefa iniciada - encaminhando eventos da câmera para %lu pistões\n",
+         (unsigned long)ctx->target_count);
+
+  while (1)
+  {
+    if (xQueueReceive(ctx->source->tx_queue, &message, portMAX_DELAY) == pdTRUE) {
+      for (size_t i = 0; i < ctx->target_count; ++i) {
+        BaseNode_t *target = ctx->targets[i];
+        if (target != NULL && target->rx_queue != NULL) {
+          if (xQueueSend(target->rx_queue, &message, pdMS_TO_TICKS(50)) != pdTRUE) {
+            printf("[ROUTER] ERRO: fila RX de %s cheia ao encaminhar %u bytes\n",
+                   target->node_id, message.data_len);
+          }
+        }
+      }
+    }
   }
 }
 
